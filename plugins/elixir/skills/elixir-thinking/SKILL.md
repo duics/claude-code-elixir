@@ -136,6 +136,18 @@ end
 
 ## Testing
 
+**Prefer pattern matching over imperative assertions.** Never use `assert length` + `Enum.at`/`List.last`/`hd`. Pattern match checks length and content in one shot:
+
+```elixir
+# Bad
+assert length(students) == 2
+assert Enum.at(students, 0).name == "Alice"
+assert Enum.at(students, 1).name == "Bob"
+
+# Good
+assert [%{name: "Alice"}, %{name: "Bob"}] = students
+```
+
 **Test behavior, not implementation.** Test use cases / public API. Refactoring shouldn't break tests.
 
 **Test your code, not the framework.** If deleting your code doesn't fail the test, it's tautological.
