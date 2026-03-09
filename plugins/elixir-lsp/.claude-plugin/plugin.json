@@ -11,13 +11,17 @@
   "lspServers": {
     "expert": {
       "command": "expert",
-      "args": [],
+      "args": ["--stdio"],
       "extensionToLanguage": {
         ".ex": "elixir",
         ".exs": "elixir",
         ".heex": "heex",
         ".leex": "leex"
-      }
+      },
+      "transport": "stdio",
+      "initializationOptions": {},
+      "settings": {},
+      "maxRestarts": 3
     }
   }
 }
