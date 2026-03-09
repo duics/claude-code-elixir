@@ -10,8 +10,8 @@
   "keywords": ["elixir", "lsp", "language-server", "phoenix", "heex"],
   "lspServers": {
     "expert": {
-      "command": "expert",
-      "args": ["--stdio"],
+      "command": "expert-adapter",
+      "args": [],
       "extensionToLanguage": {
         ".ex": "elixir",
         ".exs": "elixir",
